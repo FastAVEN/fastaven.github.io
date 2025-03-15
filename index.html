@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="FAVEN: Fast Audio-Visual Embodied Navigation in 3D Environments.">
+  <meta name="keywords" content="3D-Navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAVEN: Fast Audio-Visual Embodied Navigation in 3D Environments</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">FAVEN: Fast Audio-Visual Embodied Navigation in 3D Environments</h1>
+          <div class="is-size-5 publication-authors">
+            Anonymous ICCV Submission
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            ID: 9324
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted playsinline loop height="100%">
+        <source src="assets/demo.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        We propose FAVEN, a novel architecture based on early fusion and multimodal interaction transformer blocks 
+        for faster audio-visual embodied navigation.
+      </h2>
+    </div>
+    <div class="hero-body">
+      <img src="assets/framework.png"/>
+      <h2 class="subtitle has-text-centered">
+        Our FAVEN leverages learnable fusion tokens within each transformer block (BLK) of audio and visual encoders to aggregate and refine modality-specific information throughout the network layers. 
+        Moreover, our architecture includes multi-modal blocks (MM BLK) to facilitate dense interactions between the fusion tokens and patches from both modalities during the same forward pass. 
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <hr>
+        <div class="content has-text-justified">
+          <p>
+            Achieving fast audio-visual embodied navigation in 3D environments is still a challenging problem. 
+            Existing methods often rely on separate audio and visual data processing, leading to suboptimal path planning and increased time to locate targets. 
+            To address this challenge, we introduce FAVEN, a novel architecture based on early fusion and multimodal interaction transformer blocks for faster audio-visual embodied navigation. 
+            Our FAVEN aims to harness these correlations by integrating audio and visual data at the initial stages of processing. 
+            Specifically, we employ learnable fusion tokens that aggregate modality-specific information at each transformer block of separate audio and visual encoders. 
+            We also introduce multi-modal transformer blocks for dense interactions, which fuse audio-visual unimodal tokens and corresponding patches across audio-visual transformer blocks during the same forward pass.
+            This approach ensures a more cohesive and contextually aware integration of multimodal sensory data, thereby better capturing the dynamics of the environment. 
+            Experimental results on the Replica and Matterport3D benchmarks demonstrate that our method achieves state-of-the-art performance compared to existing audio-visual navigation baselines. 
+            Furthermore, we underscore the effectiveness of early fusion in improving the path search speed of audio-visual embodied navigation systems for real-world settings. 
+            In comparison to previous approaches, our FAVEN reduces 88.8% of the search time and improves the SPL metrics by 9.9 and 4.9 on heard and unheard sounds across various benchmarks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <hr>
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+        <div class="column has-text-centered">
+          <img src="assets/title_img.png" width="360" height="240"/>
+          <p>Search time (second) comparison with state-of-the-art methods on audio-visual embodied navigation. </p>
+          <p>Our method achieves fast audio-visual embodied navigation compared to previous methods.
+          </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_sota_replica.png" width="960" height="720"/>
+          <p>Comparison results of audio-visual navigation on Replica dataset. Our FAVEN achieves the best performance. </p>
+        </div>
+        <div class="column has-text-centered">
+          <img src="assets/table_sota_matterport3d.png" width="960" height="720"/>
+          <p>Comparison results of audio-visual navigation on Matterport3D dataset. Our FAVEN achieves the best performance. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/vis_sota.png"/>
+          <p>Qualitative visualizations of audio-visual embodied navigation. FAVEN achieves much faster results with a decent search path. 
+            The arrow in a circle denotes the direction of an agent, while the blue and green lines denote the predicted and ground-truth navigation path separately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="hero-body">
+        <h2 class="title is-3">Experimental Analyses</h2>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_ablation.png" width="960" height="640"/>
+          <p>Ablation results of component analysis for learnable fusion tokens (LFT) and multi-modal interaction blocks (MIB) on Replica datasets. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_token.png" width="960" height="640"/>
+          <p>Ablation analysis of learnable fusion tokens and the number of early fusion layers in navigation on Replica dataset. </p>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Qualitative Navigation Visualization</h2>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/vis_one.png" width="960" height="640"/>
+          <p>Qualitative visualizations of audio-visual embodied navigation on Case I. FAVEN achieves much fast results with a decent search path.</p>
+        </div>
+        <div class="column has-text-centered">
+          <img src="assets/vis_two.png" width="960" height="640"/>
+          <p>Qualitative visualizations of audio-visual embodied navigation on Case II. FAVEN achieves much fast results with a decent search path. </p>
+        </div>
+        <div class="column has-text-centered">
+          <img src="assets/vis_three.png" width="960" height="640"/>
+          <p>Qualitative visualizations of audio-visual embodied navigation on Case III. FAVEN achieves much fast results with a decent search path. </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Thanks to the website template from <a
+            href="https://nerfies.github.io/">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
